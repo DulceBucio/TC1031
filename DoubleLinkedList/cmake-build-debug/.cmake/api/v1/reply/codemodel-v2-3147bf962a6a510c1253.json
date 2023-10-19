@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "DoubleLinkedList::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-DoubleLinkedList-Debug-ac08188ca530d309a37c.json",
+					"jsonFile" : "target-DoubleLinkedList-Debug-7a22b084c9a9dd257fb9.json",
 					"name" : "DoubleLinkedList",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/Mod2/DoubleLinkedList/cmake-build-debug",
-		"source" : "C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/Mod2/DoubleLinkedList"
+		"build" : "C:/Users/PC BULLOCK/Documents/3ero/tc1031/TC1031/DoubleLinkedList/cmake-build-debug",
+		"source" : "C:/Users/PC BULLOCK/Documents/3ero/tc1031/TC1031/DoubleLinkedList"
 	},
 	"version" : 
 	{
