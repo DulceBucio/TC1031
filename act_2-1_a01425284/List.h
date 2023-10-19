@@ -115,16 +115,17 @@ bool List<T>::removeAt(int index){
     Node<T> *previous = NULL;
     int contador = 0;
     while (node != NULL) {
-        if (contador == index){
-            if (previous == NULL){
+        if (contador == index) {
+            if (previous == NULL) {
                 first = node->getSig();
             } else {
                 previous->setSig(node->getSig());
             }
-            delete previous;
+            delete node; // <-- Delete the current node, not the previous one
             return true;
         }
-        contador ++;
+
+        contador++;
         previous = node;
         node = node->getSig();
     }

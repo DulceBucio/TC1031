@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/PC BULLOCK/Documents/3ero/tc1031/listT/listasTT/cmake-build-debug"
+			"value" : "c:/Users/yasmi/OneDrive/Documents/3ero/TC1031/Mod2/DoubleLinkedList/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -623,7 +623,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/PC BULLOCK/Documents/3ero/tc1031/listT/listasTT"
+			"value" : "C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/Mod2/DoubleLinkedList"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -635,7 +635,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/listasTT"
+			"value" : "C:/Program Files (x86)/DoubleLinkedList"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -663,7 +663,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/ninja/win/ninja.exe"
+			"value" : "C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -851,7 +851,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "listasTT"
+			"value" : "DoubleLinkedList"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1230,7 +1230,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "listasTT_BINARY_DIR",
+			"name" : "DoubleLinkedList_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1239,10 +1239,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/PC BULLOCK/Documents/3ero/tc1031/listT/listasTT/cmake-build-debug"
+			"value" : "C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/Mod2/DoubleLinkedList/cmake-build-debug"
 		},
 		{
-			"name" : "listasTT_IS_TOP_LEVEL",
+			"name" : "DoubleLinkedList_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1254,7 +1254,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "listasTT_SOURCE_DIR",
+			"name" : "DoubleLinkedList_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1263,7 +1263,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/PC BULLOCK/Documents/3ero/tc1031/listT/listasTT"
+			"value" : "C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/Mod2/DoubleLinkedList"
 		}
 	],
 	"kind" : "cache",

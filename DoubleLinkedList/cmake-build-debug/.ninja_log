@@ -1,0 +1,11 @@
+# ninja log v5
+0	395	7192049700643783	CMakeFiles/DoubleLinkedList.dir/main.cpp.obj	5dec73b4a5cd4d38
+397	532	7192049701966118	DoubleLinkedList.exe	34aa577d3d9cb587
+3	324	7192049938002075	CMakeFiles/DoubleLinkedList.dir/main.cpp.obj	5dec73b4a5cd4d38
+325	417	7192049938880065	DoubleLinkedList.exe	34aa577d3d9cb587
+3	327	7192052124170812	CMakeFiles/DoubleLinkedList.dir/main.cpp.obj	5dec73b4a5cd4d38
+327	422	7192052125087861	DoubleLinkedList.exe	34aa577d3d9cb587
+4	372	7193742444154712	CMakeFiles/DoubleLinkedList.dir/main.cpp.obj	5dec73b4a5cd4d38
+372	595	7193742446343314	DoubleLinkedList.exe	34aa577d3d9cb587
+2	326	7193756101379474	CMakeFiles/DoubleLinkedList.dir/main.cpp.obj	5dec73b4a5cd4d38
+328	427	7193756102357183	DoubleLinkedList.exe	34aa577d3d9cb587
