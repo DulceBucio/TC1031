@@ -1,0 +1,3 @@
+C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/Mod2/TStack/cmake-build-debug/CMakeFiles/TStack.dir
+C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/Mod2/TStack/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/Mod2/TStack/cmake-build-debug/CMakeFiles/rebuild_cache.dir
