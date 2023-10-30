@@ -4,7 +4,6 @@
 // Clase Nodo
 //
 
-
 #ifndef LISTASTT_NODE_H
 #define LISTASTT_NODE_H
 #include <iostream>
