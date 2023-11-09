@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/PC BULLOCK/Documents/3ero/tc1031/TC1031/BT
+# Install script for directory: C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/TC1031/BT
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/PC BULLOCK/Documents/3ero/tc1031/TC1031/BT/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/TC1031/BT/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -7,13 +7,20 @@
 #include <iostream>
 using namespace std;
 #include "TreeNode.h"
+#include "List.h"
+#include "Queue.h"
 
 template <class T>
 class BST
 {
 private:
     TreeNode<T> *rootNode;
-
+    void privBFS(TreeNode<T> *node);
+    List<T> *markedNodes;
+    Queue<TreeNode<T> *> *queue;
+    int privHeight(TreeNode<T> *node);
+    bool privAncestors(TreeNode<T> *node, T value);
+    int privWhatLevelAmI(TreeNode<T>* node, T value, int level);
 public:
     BST<T>() { rootNode = NULL; }
     bool addValue(T *value);
@@ -24,6 +31,13 @@ public:
     void InOrder(TreeNode<T> *node);
     int countNodes();
     int countNodes(TreeNode<T>* node);
+    void BFS();
+    void visit(int order);
+    void PreOrder(TreeNode<T> *node);
+    void PostOrder(TreeNode<T> *node);
+    int height();
+    void ancestors(T value);
+    int whatLevelAmI(T value);
 };
 
 template <class T>
@@ -199,6 +213,144 @@ int BST<T>::countNodes(TreeNode<T>* node) {
     if (node == NULL) return 0; // en caso de que el arbol este vacio
     return 1 + countNodes(node->getLeftNode()) + countNodes(node->getRightNode()); // llamada recursiva
     // cuenta los nodos de la izquierda + cuenta los nodos de la derecha + 1 (por el nodo actual)
+}
+
+template <class T>
+void BST<T>::privBFS(TreeNode<T> *node) {
+    markedNodes->add(node->getValue());
+    cout<<node->getValue()<<endl;
+    queue->enqueue(node);
+    while (!queue->isEmpty()) {
+        TreeNode<T> *u=queue->unqueue();
+        if ( u->getLeftNode()!=NULL && markedNodes->find(u->getLeftNode()->getValue())!=NULL ) {
+            markedNodes->add(node->getLeftNode()->getValue());
+            cout<<node->getLeftNode()->getValue()<<endl;
+            queue->enqueue(node->getLeftNode());
+        }
+        if ( u->getRightNode()!=NULL && markedNodes->find(u->getRightNode()->getValue())!=NULL ) {
+            markedNodes->add(node->getRightNode()->getValue());
+            cout<<node->getRightNode()->getValue()<<endl;
+            queue->enqueue(node->getRightNode());
+        }
+    }
+}
+
+template <class T>
+void BST<T>::BFS() {
+    markedNodes=new List<T>();
+    queue = new Queue<TreeNode<T> *> ();
+    privBFS(rootNode);
+}
+
+template <class T>
+void BST<T>::PreOrder(TreeNode<T> *node) {
+    if (node == NULL) return;
+    cout << *(node->getValue()) << " "; // Empieza por la raiz.
+    PreOrder(node->getLeftNode());      // Recorre el subarbol izquierdo recursivamente.
+    PreOrder(node->getRightNode());     // Recorre el subarbol dereecho recursivamente.
+}
+
+template <class T>
+void BST<T>::PostOrder(TreeNode<T> *node) {
+    if (node == NULL) return;
+    PostOrder(node->getLeftNode());     // Recorre el subarbol izquierdo recursivamente.
+    PostOrder(node->getRightNode());    // Recorre el subarbol dereecho recursivamente.
+    cout << *(node->getValue()) << " "; // Visita el nodo.
+}
+
+// The visit method implementation.
+template <class T>
+void BST<T>::visit(int order) {
+    switch (order) {
+        case 1: PreOrder(rootNode); break;
+        case 2: InOrder(rootNode); break;
+        case 3: PostOrder(rootNode); break;
+        default: cout << "Invalid order parameter. Use 1, 2, or 3." << endl;
+    }
+    cout << endl;
+}
+
+template <class T>
+int BST<T>::height() {
+    return privHeight(rootNode);
+}
+
+template <class T>
+int BST<T>::privHeight(TreeNode<T> *node) {
+    if (node == NULL) {
+        // The height of an empty tree is -1, and a leaf node is 0.
+        return -1;
+    } else {
+        // Compute the height of each subtree.
+        int leftHeight = privHeight(node->getLeftNode());
+        int rightHeight = privHeight(node->getRightNode());
+
+        // The height of the node is the max height of its subtrees plus one for the current node.
+        return (leftHeight > rightHeight ? leftHeight : rightHeight) + 1;
+    }
+}
+
+template <class T>
+bool BST<T>::privAncestors(TreeNode<T>* node, T value) {
+    // Base case: if the node is NULL, the value is not found.
+    if (node == NULL) {
+        return false;
+    }
+
+    // If the node's value matches the search value, we've found the target node.
+    if (*(node->getValue()) == value) {
+        return true; // Stop the recursion, no need to print the current node.
+    }
+
+    // If the value is less than the current node's value, go left, otherwise go right.
+    if (value < *(node->getValue())) {
+        if (privAncestors(node->getLeftNode(), value)) {
+            cout << *(node->getValue()) << " "; // Print the ancestor's value.
+            return true;
+        }
+    } else {
+        if (privAncestors(node->getRightNode(), value)) {
+            cout << *(node->getValue()) << " "; // Print the ancestor's value.
+            return true;
+        }
+    }
+
+    // Return false if the value is not found in either subtree of the current node.
+    return false;
+}
+template <class T>
+void BST<T>::ancestors(T value) {
+    if (rootNode == NULL) {
+        cout << "The tree is empty." << endl;
+        return;
+    }
+    if (!privAncestors(rootNode, value)) {
+        cout << "No ancestors found for the value: " << value << ". It may not be in the tree." << endl;
+    }
+}
+
+template <class T>
+int BST<T>::privWhatLevelAmI(TreeNode<T>* node, T value, int level) {
+    if (node == NULL) {
+        // If we reach a NULL node, the value is not in the tree.
+        return -1;
+    }
+    if (*(node->getValue()) == value) {
+        // If the current node matches the value, return the current level.
+        return level;
+    } else if (value < *(node->getValue())) {
+        // If the value is less than the current node's value, go to the left subtree.
+        return privWhatLevelAmI(node->getLeftNode(), value, level + 1);
+    } else {
+        // If the value is greater than the current node's value, go to the right subtree.
+        return privWhatLevelAmI(node->getRightNode(), value, level + 1);
+    }
+}
+
+template <class T>
+int BST<T>::whatLevelAmI(T value) {
+    // The root node is at level 0.
+    return privWhatLevelAmI(rootNode, value, 0);
 }
 
 

@@ -12,18 +12,11 @@ int main() {
     }
 
   	cout<<"Valores del arbol:";
-  	arbolito->display();  
-  
-  	int val=0;
-    do {
-  		cout<<endl<<"Que valor quieres eliminar?";
-      cin>>val;
-      arbolito->removeValue(&val);
-      cout<<"Nuevo arbol:";	
-      arbolito->display();
-      int nodeCount = arbolito->countNodes();
-      cout << "Numero de nodos: " << nodeCount << endl;
-    } while (val!=0);
+    arbolito -> visit(1);
+    arbolito->ancestors(1);
+    cout << arbolito->whatLevelAmI(13);
+    cout << arbolito -> height();
+
 }
 
 
