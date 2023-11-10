@@ -266,7 +266,8 @@ void BST<T>::visit(int order) {
         case 1: PreOrder(rootNode); break;
         case 2: InOrder(rootNode); break;
         case 3: PostOrder(rootNode); break;
-        default: cout << "Invalid order parameter. Use 1, 2, or 3." << endl;
+        case 4: BFS(); break;
+        default: cout << "Parámetro invalido" << endl;
     }
     cout << endl;
 }
@@ -281,15 +282,16 @@ int BST<T>::privHeight(TreeNode<T> *node) {
     if (node == NULL) {
         return -1;
     } else {
+        // Contabiliza la altura de cada subarbol
         int leftHeight = privHeight(node->getLeftNode());
         int rightHeight = privHeight(node->getRightNode());
-        return (leftHeight > rightHeight ? leftHeight : rightHeight) + 1;
+        return (leftHeight > rightHeight ? leftHeight : rightHeight) + 1; // Compara y devuelve el de mayor profundidad
     }
 }
 
 template <class T>
 bool BST<T>::privAncestors(TreeNode<T>* node, T value) {
-
+    // Caso base
     if (node == NULL) {
         return false;
     }
@@ -297,13 +299,13 @@ bool BST<T>::privAncestors(TreeNode<T>* node, T value) {
     if (*(node->getValue()) == value) {
         return true;
     }
-
+    // Si el valor es menor que el nodo actual, busca en el subarbol izquierdo
     if (value < *(node->getValue())) {
         if (privAncestors(node->getLeftNode(), value)) {
             cout << *(node->getValue()) << " ";
             return true;
         }
-    } else {
+    } else { // de lo contrario, busca en el subarbol derecho
         if (privAncestors(node->getRightNode(), value)) {
             cout << *(node->getValue()) << " ";
             return true;
@@ -315,14 +317,15 @@ bool BST<T>::privAncestors(TreeNode<T>* node, T value) {
 template <class T>
 void BST<T>::ancestors(T value) {
     if (rootNode == NULL) {
-        cout << "The tree is empty." << endl;
+        cout << "El árbol está vacío" << endl;
         return;
     }
     if (!privAncestors(rootNode, value)) {
-        cout << "No ancestors found for the value: " << value << ". It may not be in the tree." << endl;
+        cout << "No se encontraron ancestros para el valor" << value;
     }
 }
 
+// Función recursiva que devuelve el nivel de un nodo
 template <class T>
 int BST<T>::privWhatLevelAmI(TreeNode<T>* node, T value, int level) {
     if (node == NULL) {
@@ -339,7 +342,6 @@ int BST<T>::privWhatLevelAmI(TreeNode<T>* node, T value, int level) {
 
 template <class T>
 int BST<T>::whatLevelAmI(T value) {
-    // The root node is at level 0.
     return privWhatLevelAmI(rootNode, value, 0);
 }
 

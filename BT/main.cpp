@@ -11,12 +11,29 @@ int main() {
         arbolito->addValue(&arr2[i]);
     }
 
-  	cout<<"Valores del arbol:";
-    arbolito -> visit(1);
-    arbolito->ancestors(1);
-    cout << arbolito->whatLevelAmI(13);
-    cout << arbolito -> height();
-    arbolito->BFS();
+    // Función visit
+  	cout<<"Valores del arbol en preorder: ";
+    arbolito->visit(1);
+    cout<<endl;
+    cout<<"Valores del arbol en inorder: ";
+    arbolito->visit(2);
+    cout<<endl;
+    cout<<"Valores del arbol en postorder: ";
+    arbolito->visit(3);
+    cout<<endl;
+    cout<<"Valores del arbol en level by level: ";
+    arbolito->visit(4);
+    cout<<endl;
+
+    // Función height
+    cout<<"La altura del arbol es: "<<arbolito->height()<<endl;
+
+    // Función ancestors
+    cout<<"Los ancestros del nodo 23 son: ";
+    arbolito->ancestors(23);
+
+    // Función whatLevelAmI
+    cout<<"El nivel del nodo 23 es: "<<arbolito->whatLevelAmI(23)<<endl;
 
 }
 
