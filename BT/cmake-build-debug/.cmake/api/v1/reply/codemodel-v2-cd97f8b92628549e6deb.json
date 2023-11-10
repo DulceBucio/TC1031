@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "BT::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-BT-Debug-78f4a816c43311d3973e.json",
+					"jsonFile" : "target-BT-Debug-38284f1f068e0d697b5d.json",
 					"name" : "BT",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/TC1031/BT/cmake-build-debug",
-		"source" : "C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/TC1031/BT"
+		"build" : "C:/Users/PC BULLOCK/Documents/3ero/tc1031/TC1031/BT/cmake-build-debug",
+		"source" : "C:/Users/PC BULLOCK/Documents/3ero/tc1031/TC1031/BT"
 	},
 	"version" : 
 	{

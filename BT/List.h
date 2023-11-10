@@ -27,6 +27,7 @@ public:
     virtual void replace(int index, T *value);
     virtual bool isEmpty();
     string toString() const;
+    virtual bool find(T *value);
     virtual int getSize();
 private:
     TreeNode<T> *first;
@@ -79,7 +80,7 @@ void List<T>::remove(T *value){
     TreeNode<T> *node = getFirst();
     TreeNode<T> *previous = NULL;
     while (node != NULL) {
-        if (node->getInfo() == value){
+        if (node->getValue() == value){
             if (previous == NULL){
                 first = node->getSig();
             } else {
@@ -98,10 +99,24 @@ template <class T>
 bool List<T>::elementExist(T *value){
     TreeNode<T> *node = getFirst();
     while (node != NULL) {
-        if (node->getInfo() == value){
+        if (node->getValue() == value){
             return true;
         }
         node = node->getSig();
+    }
+    return false;
+}
+
+template <class T>
+bool List<T>::find(T *value){
+    TreeNode<T> *nodo = getFirst();
+    TreeNode<T> *anterior = NULL;
+    while (nodo != NULL) {
+        if (nodo->getValue() == value){
+            return true;
+        }
+        anterior = nodo;
+        nodo = nodo->getSig();
     }
     return false;
 }
@@ -139,7 +154,7 @@ void List<T>::replace(int index, T *value){
     int contador = 0;
     while (node != NULL) {
         if (contador == index){
-            node->setInfo(value);
+            node->setValue(value);
             return;
         }
         contador ++;
@@ -167,7 +182,7 @@ string List<T>::toString() const {
     while (p!=NULL)
     {
         stringstream ss;
-        ss<<*(p->getInfo());
+        ss<<*(p->getValue());
         outputStr+=ss.str()+" ";
         p=p->getSig();
     }

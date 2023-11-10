@@ -14,7 +14,7 @@ private:
     T *value;
     TreeNode<T> *leftNode;
     TreeNode<T> *rightNode;
-
+    TreeNode<T> *sig;
 public:
     TreeNode<T>()
     {
@@ -39,6 +39,12 @@ public:
     void setRightNode(TreeNode<T> *pRightNode) { rightNode = pRightNode; }
     T *getValue() { return value; }
     void setValue(T *pValue) { value = pValue; }
+    void setSig(TreeNode<T> *pNextNode) {
+        sig = pNextNode;
+    }
+    TreeNode<T> *getSig() const {
+        return sig;
+}
 };
 
 

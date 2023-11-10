@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/TC1031/BT/main.cpp" "CMakeFiles/BT.dir/main.cpp.obj" "gcc" "CMakeFiles/BT.dir/main.cpp.obj.d"
+  "C:/Users/PC BULLOCK/Documents/3ero/tc1031/TC1031/BT/main.cpp" "CMakeFiles/BT.dir/main.cpp.obj" "gcc" "CMakeFiles/BT.dir/main.cpp.obj.d"
   )
 
 # Targets to which this target links.

@@ -7,6 +7,7 @@
 #include "List.h"
 #include <iostream>
 using namespace std;
+using namespace std;
 
 template <class T>
 class Queue
@@ -22,7 +23,7 @@ public:
         {
             return NULL;
         }
-        T *value = list->getFirst()->getInfo();
+        T *value = list->getFirst()->getValue();
         list->removeAt(0);
         return value;
     };

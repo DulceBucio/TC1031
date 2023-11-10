@@ -16,6 +16,7 @@ int main() {
     arbolito->ancestors(1);
     cout << arbolito->whatLevelAmI(13);
     cout << arbolito -> height();
+    arbolito->BFS();
 
 }
 

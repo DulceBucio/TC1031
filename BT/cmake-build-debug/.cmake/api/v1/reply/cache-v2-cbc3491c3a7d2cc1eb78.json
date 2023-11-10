@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/TC1031/BT/cmake-build-debug"
+			"value" : "C:/Users/PC BULLOCK/Documents/3ero/tc1031/TC1031/BT/cmake-build-debug"
 		},
 		{
 			"name" : "BT_IS_TOP_LEVEL",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/TC1031/BT"
+			"value" : "C:/Users/PC BULLOCK/Documents/3ero/tc1031/TC1031/BT"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/yasmi/OneDrive/Documents/3ero/TC1031/TC1031/BT/cmake-build-debug"
+			"value" : "c:/Users/PC BULLOCK/Documents/3ero/tc1031/TC1031/BT/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -743,7 +743,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/yasmi/OneDrive/Documents/3ero/TC1031/TC1031/BT"
+			"value" : "C:/Users/PC BULLOCK/Documents/3ero/tc1031/TC1031/BT"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
